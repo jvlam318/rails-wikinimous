@@ -1,0 +1,9 @@
+ <%= render 'navbar' %>
+<div class="container border mt-2 p-3">
+<h1><%= @article.title %></h1>
+<p><%= @article.content %></p>
+
+<%= link_to "edit article", edit_article_path(@article), :class => "btn btn-warning" %>
+<%= link_to "DELETE", article_path(@article), method: :delete, data: { confirm: "Are you sure?" }, :class => "btn btn-danger ml-2" %>
+<%= link_to "back to all", articles_path, :class => "btn btn-primary" %>
+</div>
